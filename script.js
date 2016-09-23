@@ -55,6 +55,7 @@
 	var view = {
 
 	};
+	//dodać wyłączanie buttona
 	var handlers = {
 			start: document.getElementsByClassName("start")[0],
 			startState: "off",
@@ -63,11 +64,25 @@
 							this.start.addEventListener("click", function(event){
 									wordBase.displayAll();
 									handlers.startState = "on";
-									handlers.start.textContent = " działa ";
+									handlers.start.textContent = " Pisz  ";
+									evaluate.evFirst();
 							});
-
 					}
 			}
 	};
+	var evaluate = {
+			inputFirst: document.getElementsByClassName("input").value,
+			//będzie oceniało, czy wyraz na dole jest tym samym co na górze
+			//jeśli tak, to na czerwono
+			//porównaj pierwszą literę z pierwszą literą 
+			evFirst: function () {
 
+					//pobierz pierwszą literę z góry i z dołu
+					var firstTop = wordBase.words[0];
+					console.log(inputFirst);
+					// if (firstTop === this.inputFirst){
+					// 	alert("ok");
+					// }
+			},
+	};
 	handlers.startHandlers();
