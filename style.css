@@ -1,0 +1,9 @@
+body {
+	background-color: black;
+	color: white;
+	font: 14px courier;
+}
+.user-input {
+	color: red;
+	margin-top: 20px;
+}
